@@ -12,5 +12,5 @@ use MonkiiBuilt\LaravelPages\Models\PageSection;
 
 class PageSectionText extends PageSection
 {
-
+    protected static $singleTableType = 'plain_text';
 }

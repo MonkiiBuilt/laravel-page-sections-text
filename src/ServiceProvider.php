@@ -8,9 +8,12 @@
 
 namespace MonkiiBuilt\LaravelPageSectionsText;
 
-use MonkiiBuilt\LaravelPages\Models\PageSection;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ServiceProvider {
+use MonkiiBuilt\LaravelPages\Models\PageSection;
+use MonkiiBuilt\LaravelPageSectionsText\Models\PageSectionText;
+
+class ServiceProvider  extends BaseServiceProvider {
 
     protected $defer = false;
 
@@ -18,9 +21,7 @@ class ServiceProvider {
     {
         $packageRegistry->registerPackage('MonkiiBuilt\LaravelPages');
 
-        $parent = PageSection::getInstance();
-
-        $parent::addDynamicSubclass();
+        PageSection::addDynamicSubclass(PageSectionText::class);
 
     }
 }
