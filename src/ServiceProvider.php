@@ -21,7 +21,7 @@ class ServiceProvider  extends BaseServiceProvider {
     {
         $packageRegistry->registerPackage('MonkiiBuilt\LaravelPages');
 
-        PageSection::addDynamicSubclass(PageSectionText::class);
+        PageSection::addSingleTableSubclass(PageSectionText::class);
 
     }
 }
