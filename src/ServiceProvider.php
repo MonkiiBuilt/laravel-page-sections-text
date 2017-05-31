@@ -23,5 +23,7 @@ class ServiceProvider  extends BaseServiceProvider {
 
         PageSection::addSingleTableSubclass(PageSectionText::class);
 
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'page-sections-text');
+
     }
 }

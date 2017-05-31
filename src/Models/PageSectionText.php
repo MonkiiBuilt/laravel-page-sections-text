@@ -13,4 +13,10 @@ use MonkiiBuilt\LaravelPages\Models\PageSection;
 class PageSectionText extends PageSection
 {
     protected static $singleTableType = 'plain_text';
+
+    public function getDecorator()
+    {
+        $decoratorName = \MonkiiBuilt\LaravelPageSectionsText\PageSectionTextDecorator::class;
+        return new $decoratorName($this);
+    }
 }
