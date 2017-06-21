@@ -13,13 +13,13 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use MonkiiBuilt\LaravelPages\Models\PageSection;
 use MonkiiBuilt\LaravelPageSectionsText\Models\PageSectionText;
 
-class ServiceProvider  extends BaseServiceProvider {
+class ServiceProvider extends BaseServiceProvider {
 
     protected $defer = false;
 
     public function boot(\MonkiiBuilt\LaravelAdministrator\PackageRegistry $packageRegistry)
     {
-        $packageRegistry->registerPackage('MonkiiBuilt\LaravelPages');
+        $packageRegistry->registerPackage('MonkiiBuilt\LaravelPageSectionsText');
 
         PageSection::addSingleTableSubclass(PageSectionText::class);
 

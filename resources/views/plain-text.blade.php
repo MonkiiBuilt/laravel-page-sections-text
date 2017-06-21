@@ -10,14 +10,15 @@
     <div class="panel__inner">
         <div class="panel__row">
             <div class="panel__full">
-                <h4>{{ $section->form_element_label }}</h4>
+                <h4>{{ $section->label }}</h4>
             </div>
             <div class="panel__full">
-                <fieldset class="{{ $errors->has($section->form_element_name) ? 'error' : '' }}">
-                    {!! Form::textarea( 'sections[' . $section->id . '][' . $section->form_element_name . ']' ) !!}
-                    <div class="form__error">{{ $errors->first($section->form_element_name) }}</div>
+                <fieldset class="{{ $errors->has('sections.' . $section->id . '.data.content') ? 'error' : '' }}">
+                    {!! Form::textarea( 'sections[' . $section->id . '][data][content]', $section->data['content']) !!}
+                    <div class="form__error">{{ $errors->first('sections.' . $section->id . '.data.content') }}</div>
                 </fieldset>
             </div>
         </div>
     </div>
 </div>
+
