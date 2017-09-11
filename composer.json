@@ -2,7 +2,7 @@
     "name": "monkiibuilt/laravel-page-sections-text",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.4.*",
+        "laravel/framework": ">=5.4 <5.6",
         "MonkiiBuilt/laravel-pages": "0.0.*"
     },
     "autoload": {
