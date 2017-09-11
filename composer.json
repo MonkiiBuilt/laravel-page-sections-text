@@ -6,8 +6,8 @@
         "MonkiiBuilt/laravel-pages": "0.0.*"
     },
     "autoload": {
-        "psr-0": {
-            "MonkiiBuilt\\LaravelPageSectionsText": "src/"
+        "psr-4": {
+            "MonkiiBuilt\\LaravelPageSectionsText\\": "src/"
         }
     },
     "extra": {
